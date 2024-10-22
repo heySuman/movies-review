@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRahOrbU-iZdILPS_cComkydjKPGwyp2_0azcKYQ9cTw&s"
+        type="image/x-icon">
+    <title>Movie Review</title>
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <h1>Movie Review</h1>
+            <button id="add-review-header">
+                Add Review
+            </button>
+        </nav>
+
+    </header>
+
+    <div class="sort-container">
+        <span> <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M4 18h4c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1M3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1m1 6h10c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1" />
+            </svg> Sort by </span>
+        <select name="sortby" id="sort">
+            <option value="movieTitle">Name</option>
+            <option value="movieRating">Rating</option>
+        </select>
+    </div>
+
+    <main>
+        <!-- Add Form -->
+        <form class="add-movie-review form-inactive" action="">
+            <h2>Add Movie Review</h2>
+
+            <div class="textfields">
+
+                <div class="textfield-holder">
+                    <label for="">Movie Title</label>
+                    <input type="text" placeholder="Enter Movie title" id="movieTitle" required>
+                </div>
+
+                <div class="textfield-holder">
+                    <label for="">Movie Description</label>
+                    <input type="text" placeholder="Enter the movie description" id="movieDescription" required>
+                </div>
+
+                <div class="textfield-holder">
+                    <label for="">Movie Image URL</label>
+                    <input type="text" placeholder="Enter movie image url" id="movieImage" required>
+                </div>
+
+                <div class="textfield-holder">
+                    <label for="">Director Name</label>
+                    <input type="text" placeholder="Enter Director Name" id="movieDirector" required>
+                </div>
+
+                <div class="textfield-holder">
+                    <label for="">Rating</label>
+                    <input type="number" placeholder="Enter Rating" id="movieRating" required>
+                </div>
+            </div>
+
+            <div class="btn-collection">
+                <button id="cancel-btn" type="button">
+                    Cancel
+                </button>
+
+                <button type="submit" id="add-review-btn">
+                    Add Review
+                </button>
+            </div>
+
+        </form>
+
+        <div id="all-movies"></div>
+
+    </main>
+
+    <footer>
+
+        <span>Created by Suman Shrestha.</span>
+
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+
+</body>
+
+</html>
